@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---- MODELS ----
+
+model User {
+  id           String        @id @default(uuid())
+  name         String        @db.VarChar(100)
+  fatherName   String?       @db.VarChar(100)
+  email        String        @unique @db.VarChar(100)
+  phone        String        @db.VarChar(10)
+  age          Int?
+  img          String
+  address      String?
+  password     String?
+  role         Role          @default(STAFF)
+  doctor       Doctor?       @relation("DoctorToUser")
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  appointments Appointment[]
+
+  @@map("users")
+}
+
+enum Role {
+  ADMIN
+  DOCTOR
+  STAFF
+}
+
+model Doctor {
+  id           String        @id @default(uuid())
+  user         User          @relation("DoctorToUser", fields: [userId], references: [id])
+  userId       String        @unique
+  bio          String?
+  services     Service[]
+  appointments Appointment[]
+
+  @@map("doctors")
+}
+
+model Service {
+  id           String        @id @default(uuid())
+  name         String        @db.VarChar(100)
+  description  String?
+  img          String
+  duration     Int
+  price        Float
+  doctorId     String
+  doctor       Doctor        @relation(fields: [doctorId], references: [id])
+  appointments Appointment[]
+
+  @@map("services")
+}
+
+model Appointment {
+  id        String            @id @default(uuid())
+  patientId String
+  patient   User              @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  serviceId String
+  service   Service           @relation(fields: [serviceId], references: [id])
+  doctorId  String
+  doctor    Doctor            @relation(fields: [doctorId], references: [id])
+  date      DateTime
+  status    AppointmentStatus @default(PENDING)
+  notes     String?
+  createdAt DateTime          @default(now())
+
+  @@map("appointments")
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
