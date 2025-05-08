@@ -1301,6 +1301,7 @@ export namespace Prisma {
     fatherName: string | null
     email: string | null
     phone: string | null
+    securityCode: string | null
     age: number | null
     img: string | null
     address: string | null
@@ -1316,6 +1317,7 @@ export namespace Prisma {
     fatherName: string | null
     email: string | null
     phone: string | null
+    securityCode: string | null
     age: number | null
     img: string | null
     address: string | null
@@ -1331,6 +1333,7 @@ export namespace Prisma {
     fatherName: number
     email: number
     phone: number
+    securityCode: number
     age: number
     img: number
     address: number
@@ -1356,6 +1359,7 @@ export namespace Prisma {
     fatherName?: true
     email?: true
     phone?: true
+    securityCode?: true
     age?: true
     img?: true
     address?: true
@@ -1371,6 +1375,7 @@ export namespace Prisma {
     fatherName?: true
     email?: true
     phone?: true
+    securityCode?: true
     age?: true
     img?: true
     address?: true
@@ -1386,6 +1391,7 @@ export namespace Prisma {
     fatherName?: true
     email?: true
     phone?: true
+    securityCode?: true
     age?: true
     img?: true
     address?: true
@@ -1488,6 +1494,7 @@ export namespace Prisma {
     fatherName: string | null
     email: string
     phone: string
+    securityCode: string
     age: number | null
     img: string
     address: string | null
@@ -1522,6 +1529,7 @@ export namespace Prisma {
     fatherName?: boolean
     email?: boolean
     phone?: boolean
+    securityCode?: boolean
     age?: boolean
     img?: boolean
     address?: boolean
@@ -1540,6 +1548,7 @@ export namespace Prisma {
     fatherName?: boolean
     email?: boolean
     phone?: boolean
+    securityCode?: boolean
     age?: boolean
     img?: boolean
     address?: boolean
@@ -1555,6 +1564,7 @@ export namespace Prisma {
     fatherName?: boolean
     email?: boolean
     phone?: boolean
+    securityCode?: boolean
     age?: boolean
     img?: boolean
     address?: boolean
@@ -1570,6 +1580,7 @@ export namespace Prisma {
     fatherName?: boolean
     email?: boolean
     phone?: boolean
+    securityCode?: boolean
     age?: boolean
     img?: boolean
     address?: boolean
@@ -1579,7 +1590,7 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "fatherName" | "email" | "phone" | "age" | "img" | "address" | "password" | "role" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "fatherName" | "email" | "phone" | "securityCode" | "age" | "img" | "address" | "password" | "role" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     doctor?: boolean | User$doctorArgs<ExtArgs>
     appointments?: boolean | User$appointmentsArgs<ExtArgs>
@@ -1600,6 +1611,7 @@ export namespace Prisma {
       fatherName: string | null
       email: string
       phone: string
+      securityCode: string
       age: number | null
       img: string
       address: string | null
@@ -2037,6 +2049,7 @@ export namespace Prisma {
     readonly fatherName: FieldRef<"User", 'String'>
     readonly email: FieldRef<"User", 'String'>
     readonly phone: FieldRef<"User", 'String'>
+    readonly securityCode: FieldRef<"User", 'String'>
     readonly age: FieldRef<"User", 'Int'>
     readonly img: FieldRef<"User", 'String'>
     readonly address: FieldRef<"User", 'String'>
@@ -5868,6 +5881,7 @@ export namespace Prisma {
     fatherName: 'fatherName',
     email: 'email',
     phone: 'phone',
+    securityCode: 'securityCode',
     age: 'age',
     img: 'img',
     address: 'address',
@@ -6041,6 +6055,7 @@ export namespace Prisma {
     fatherName?: StringNullableFilter<"User"> | string | null
     email?: StringFilter<"User"> | string
     phone?: StringFilter<"User"> | string
+    securityCode?: StringFilter<"User"> | string
     age?: IntNullableFilter<"User"> | number | null
     img?: StringFilter<"User"> | string
     address?: StringNullableFilter<"User"> | string | null
@@ -6058,6 +6073,7 @@ export namespace Prisma {
     fatherName?: SortOrderInput | SortOrder
     email?: SortOrder
     phone?: SortOrder
+    securityCode?: SortOrder
     age?: SortOrderInput | SortOrder
     img?: SortOrder
     address?: SortOrderInput | SortOrder
@@ -6078,6 +6094,7 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     fatherName?: StringNullableFilter<"User"> | string | null
     phone?: StringFilter<"User"> | string
+    securityCode?: StringFilter<"User"> | string
     age?: IntNullableFilter<"User"> | number | null
     img?: StringFilter<"User"> | string
     address?: StringNullableFilter<"User"> | string | null
@@ -6095,6 +6112,7 @@ export namespace Prisma {
     fatherName?: SortOrderInput | SortOrder
     email?: SortOrder
     phone?: SortOrder
+    securityCode?: SortOrder
     age?: SortOrderInput | SortOrder
     img?: SortOrder
     address?: SortOrderInput | SortOrder
@@ -6118,6 +6136,7 @@ export namespace Prisma {
     fatherName?: StringNullableWithAggregatesFilter<"User"> | string | null
     email?: StringWithAggregatesFilter<"User"> | string
     phone?: StringWithAggregatesFilter<"User"> | string
+    securityCode?: StringWithAggregatesFilter<"User"> | string
     age?: IntNullableWithAggregatesFilter<"User"> | number | null
     img?: StringWithAggregatesFilter<"User"> | string
     address?: StringNullableWithAggregatesFilter<"User"> | string | null
@@ -6330,6 +6349,7 @@ export namespace Prisma {
     fatherName?: string | null
     email: string
     phone: string
+    securityCode?: string
     age?: number | null
     img: string
     address?: string | null
@@ -6347,6 +6367,7 @@ export namespace Prisma {
     fatherName?: string | null
     email: string
     phone: string
+    securityCode?: string
     age?: number | null
     img: string
     address?: string | null
@@ -6364,6 +6385,7 @@ export namespace Prisma {
     fatherName?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
+    securityCode?: StringFieldUpdateOperationsInput | string
     age?: NullableIntFieldUpdateOperationsInput | number | null
     img?: StringFieldUpdateOperationsInput | string
     address?: NullableStringFieldUpdateOperationsInput | string | null
@@ -6381,6 +6403,7 @@ export namespace Prisma {
     fatherName?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
+    securityCode?: StringFieldUpdateOperationsInput | string
     age?: NullableIntFieldUpdateOperationsInput | number | null
     img?: StringFieldUpdateOperationsInput | string
     address?: NullableStringFieldUpdateOperationsInput | string | null
@@ -6398,6 +6421,7 @@ export namespace Prisma {
     fatherName?: string | null
     email: string
     phone: string
+    securityCode?: string
     age?: number | null
     img: string
     address?: string | null
@@ -6413,6 +6437,7 @@ export namespace Prisma {
     fatherName?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
+    securityCode?: StringFieldUpdateOperationsInput | string
     age?: NullableIntFieldUpdateOperationsInput | number | null
     img?: StringFieldUpdateOperationsInput | string
     address?: NullableStringFieldUpdateOperationsInput | string | null
@@ -6428,6 +6453,7 @@ export namespace Prisma {
     fatherName?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
+    securityCode?: StringFieldUpdateOperationsInput | string
     age?: NullableIntFieldUpdateOperationsInput | number | null
     img?: StringFieldUpdateOperationsInput | string
     address?: NullableStringFieldUpdateOperationsInput | string | null
@@ -6718,6 +6744,7 @@ export namespace Prisma {
     fatherName?: SortOrder
     email?: SortOrder
     phone?: SortOrder
+    securityCode?: SortOrder
     age?: SortOrder
     img?: SortOrder
     address?: SortOrder
@@ -6737,6 +6764,7 @@ export namespace Prisma {
     fatherName?: SortOrder
     email?: SortOrder
     phone?: SortOrder
+    securityCode?: SortOrder
     age?: SortOrder
     img?: SortOrder
     address?: SortOrder
@@ -6752,6 +6780,7 @@ export namespace Prisma {
     fatherName?: SortOrder
     email?: SortOrder
     phone?: SortOrder
+    securityCode?: SortOrder
     age?: SortOrder
     img?: SortOrder
     address?: SortOrder
@@ -7665,6 +7694,7 @@ export namespace Prisma {
     fatherName?: string | null
     email: string
     phone: string
+    securityCode?: string
     age?: number | null
     img: string
     address?: string | null
@@ -7681,6 +7711,7 @@ export namespace Prisma {
     fatherName?: string | null
     email: string
     phone: string
+    securityCode?: string
     age?: number | null
     img: string
     address?: string | null
@@ -7773,6 +7804,7 @@ export namespace Prisma {
     fatherName?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
+    securityCode?: StringFieldUpdateOperationsInput | string
     age?: NullableIntFieldUpdateOperationsInput | number | null
     img?: StringFieldUpdateOperationsInput | string
     address?: NullableStringFieldUpdateOperationsInput | string | null
@@ -7789,6 +7821,7 @@ export namespace Prisma {
     fatherName?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
+    securityCode?: StringFieldUpdateOperationsInput | string
     age?: NullableIntFieldUpdateOperationsInput | number | null
     img?: StringFieldUpdateOperationsInput | string
     address?: NullableStringFieldUpdateOperationsInput | string | null
@@ -7940,6 +7973,7 @@ export namespace Prisma {
     fatherName?: string | null
     email: string
     phone: string
+    securityCode?: string
     age?: number | null
     img: string
     address?: string | null
@@ -7956,6 +7990,7 @@ export namespace Prisma {
     fatherName?: string | null
     email: string
     phone: string
+    securityCode?: string
     age?: number | null
     img: string
     address?: string | null
@@ -8032,6 +8067,7 @@ export namespace Prisma {
     fatherName?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
+    securityCode?: StringFieldUpdateOperationsInput | string
     age?: NullableIntFieldUpdateOperationsInput | number | null
     img?: StringFieldUpdateOperationsInput | string
     address?: NullableStringFieldUpdateOperationsInput | string | null
@@ -8048,6 +8084,7 @@ export namespace Prisma {
     fatherName?: NullableStringFieldUpdateOperationsInput | string | null
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
+    securityCode?: StringFieldUpdateOperationsInput | string
     age?: NullableIntFieldUpdateOperationsInput | number | null
     img?: StringFieldUpdateOperationsInput | string
     address?: NullableStringFieldUpdateOperationsInput | string | null

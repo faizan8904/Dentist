@@ -16,6 +16,7 @@ model User {
   fatherName    String?        @db.VarChar(100)
   email         String         @unique @db.VarChar(100)
   phone         String         @db.VarChar(10)
+  securityCode  String         @db.Char(4) @default("0000")
   age           Int?
   img           String
   address       String?

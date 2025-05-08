@@ -7,6 +7,7 @@ export type User = {
   fatherName?: string | null;
   email: string;
   password: string;
+  securityCode : string;
   phone: string;
   age?: number | null;
   img: string;
