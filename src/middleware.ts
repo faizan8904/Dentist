@@ -45,7 +45,12 @@ export async function middleware(request: NextRequest) {
         request: {
           headers: requestHeaders,
         },
-      })
+        // Add these headers to the response that API routes can access
+        headers: {
+          'Access-Control-Expose-Headers': 'x-user-id, x-user-role',
+        }
+      });
+      
     } catch (error) {
       console.error('JWT verification failed:', error)
       return NextResponse.redirect(new URL('/login', request.url))
